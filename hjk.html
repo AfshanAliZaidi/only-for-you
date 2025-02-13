@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<title>I love you</title>
+<style>
+body{
+font-family: 'Arial' ,
+sans-serif;
+text-align: center;
+margin: 0;
+padding: 0;
+height: 100vh;
+background:
+linear-gradient(45deg, #ff9a9e, #fad0c4);
+animation: bgAnimation 10s infinite;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+@keyframes bgAnimation{
+0%
+{ background-position: 0% 50%; }
+50%
+{ background-position: 100% 50%; }
+100%
+{ background-position: 0% 50%; }
+}
+.container{
+color: white;
+text-shadow: 0 0 10px
+#fff,0 0 20px #ff007f, 0 0 30px
+#ff007f;
+}
+h1{
+font-size: 3rem;
+animation: textGlow 2s
+ease-in-out infinite alternate;
+}
+@keyframes textGlow{
+from{ text-shadow: 0 0 10px #fff, 0 0 20px #ff007f, 0 0 30px #ff007f; }
+to{ text-shadow: 0 0 20px #fff, 0 0 40px #ff007f, 0 0 50px #ff007f; }
+}
+button{
+padding: 15px 30px;
+font-size: 1.5rem;
+border: none;
+background: #ff007f;
+color: white;
+cursor: pointer;
+border-radius: 5px;
+box-shadow: 0 5px
+#b0005e;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover{
+transform: translateY(-3px);
+box-shadow: 0 8px #b0005e;
+background: #e60073;
+}
+#hiddenMessage{
+display: none;
+font-size: 1.8rem;
+margin-top: 20px;
+animation: fadeIn 2s
+ease-in-out;
+}
+@keyframes fadeIn{
+from { opacity: 0; }
+to{ opacity: 1; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Hello</h1>
+<p>Click the button below for a Surprise !</p>
+<button onclick="showMessage()">Click Me</button>
+<p id="hiddenMessage">Hello World</p></div>
+<script>
+function showMessage(){
+const message= document.getElementById('hiddenMessage');
+message.style.display='block';
+}
+</script>
+</body>
+<html>
